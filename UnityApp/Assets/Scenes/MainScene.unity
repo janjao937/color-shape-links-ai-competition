@@ -374,8 +374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  selectedThinker: ColorShapeLinks.Common.AI.Examples.RandomAIThinker
-  thinkerParams: 123
+  selectedThinker: Test
+  thinkerParams: 
 --- !u!114 &617695838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,8 +389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  selectedThinker: ColorShapeLinks.Common.AI.Examples.MinimaxAIThinker
-  thinkerParams: 2
+  selectedThinker: ColorShapeLinks.Common.AI.Examples.RandomAIThinker
+  thinkerParams: 123
 --- !u!114 &617695839
 MonoBehaviour:
   m_ObjectHideFlags: 0
