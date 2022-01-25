@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  selectedThinker: ColorShapeLinks.Common.AI.Examples.SequentialAIThinker
+  selectedThinker: BK_AI
   thinkerParams: 
 --- !u!114 &617695837
 MonoBehaviour:
