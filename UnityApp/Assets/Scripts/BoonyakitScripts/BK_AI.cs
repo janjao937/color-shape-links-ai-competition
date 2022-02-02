@@ -7,45 +7,50 @@ using System;
 
 public class BK_AI : AbstractThinker
 {
-    // Last column played
+    
     private int lastCol = -1;
 
-    /// @copydoc IThinker.Think
-    /// <seealso cref="IThinker.Think"/>
+    
     public override FutureMove Think(Board board, CancellationToken ct)
     {
-        // The move to perform
+        //Perform Position
         FutureMove move;
 
-        // Find next free column where to play
+        /*
+          public FutureMove(int column, PShape shape)
+        {
+            this.column = column;
+            this.shape = shape;
+        }
+
+        */
+      
+   
         do
         {
-            // Get next column
             lastCol++;
-            if (lastCol >= board.cols) lastCol = 0;
-            // Is this task to be cancelled?
+            if (lastCol >= board.cols) lastCol = 0;  // Get  column                        
             if (ct.IsCancellationRequested) return FutureMove.NoMove;
         }
-        while (board.IsColumnFull(lastCol));
+        while (board.IsColumnFull(lastCol)); // Check Colum
 
-        // Try to use the winning shape first
+
+
+        //Check shape   board.Turn.Shape()   Check Turn  board.Turn Color and Shape
+
         if (board.PieceCount(board.Turn, board.Turn.Shape()) > 0)
         {
             move = new FutureMove(lastCol, board.Turn.Shape());
         }
-        // If there's no pieces with the winning shape left, try and use
-        // the other shape
         else if (board.PieceCount(board.Turn, board.Turn.Other().Shape()) > 0)
         {
             move = new FutureMove(lastCol, board.Turn.Other().Shape());
         }
-        // Otherwise return a "no move" (this should never happen)
         else
         {
-            move = FutureMove.NoMove;
+            move = FutureMove.NoMove;           //NomMove = -1,Shape = -1
         }
 
-        // Return move
         return move;
     }
 

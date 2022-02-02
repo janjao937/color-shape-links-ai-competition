@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  selectedThinker: BK_AI
+  selectedThinker: Boonyakit_AiThinker
   thinkerParams: 
 --- !u!114 &617695837
 MonoBehaviour:
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  selectedThinker: Test
+  selectedThinker: ColorShapeLinks.Common.AI.Examples.SequentialAIThinker
   thinkerParams: 
 --- !u!114 &617695838
 MonoBehaviour:
@@ -389,8 +389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
-  selectedThinker: ColorShapeLinks.Common.AI.Examples.RandomAIThinker
-  thinkerParams: 123
+  selectedThinker: ColorShapeLinks.Common.AI.Examples.MinimaxAIThinker
+  thinkerParams: 1
 --- !u!114 &617695839
 MonoBehaviour:
   m_ObjectHideFlags: 0
