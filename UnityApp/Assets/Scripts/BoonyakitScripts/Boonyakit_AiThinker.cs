@@ -11,6 +11,7 @@ public class Boonyakit_AiThinker : AbstractThinker
     int col = 0;
     bool check = true;
     
+    
     public override FutureMove Think(Board board, CancellationToken ct)
     {
         if(check)
